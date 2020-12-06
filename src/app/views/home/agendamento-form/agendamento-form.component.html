@@ -1,0 +1,65 @@
+<h1 mat-dialog-title>Novo Agendamento</h1>
+<div mat-dialog-content>
+    <form class="example-form" [formGroup]="agendamentoForm">
+        <mat-form-field class="example-full-width">
+            <mat-label>Nome do Aluno</mat-label>
+            <input matInput 
+            placeholder="Digite seu nome"
+            formControlName="nome"
+            
+            name="nome">
+        </mat-form-field>
+
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Curso</mat-label>
+            <input matInput 
+            placeholder="Digite seu curso"
+            formControlName="curso"
+            
+            name="curso">
+        </mat-form-field>
+
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Matricula</mat-label>
+            <input matInput 
+            placeholder="Digite sua matricula"
+            formControlName="matricula"
+            name="matricula"
+           
+            type="number"
+            maxlength="12"
+            >
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Assunto</mat-label>
+            <input matInput 
+            placeholder="Digite o assunto"
+            
+            formControlName="assunto"
+            name="assunto"
+            >
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Data do Agendamento</mat-label>
+            <input matInput 
+            formControlName="data"
+            
+            name="data"
+            type="date">
+        </mat-form-field>
+    </form>
+</div>
+<div mat-dialog-actions>
+    <button mat-raised-button color="primary" (click)="creatAgendamento()">Salvar</button>
+    <button mat-raised-button (click)="cancel()">Cancelar</button>
+</div>
+<!-- 
+NOME: string
+CURSO: String
+DATA: Date
+MATRICULA: Number
+ASSUNTO OU TITULO: String -->
