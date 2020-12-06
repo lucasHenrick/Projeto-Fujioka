@@ -1,5 +1,6 @@
 import { AfterViewInit } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Agendamento } from 'src/app/shared/model/agendamento.model';
 import { AgendamentoService } from '../../../shared/service/agendamento.service';
 @Component({
@@ -11,7 +12,7 @@ export class AgedamentoListComponent implements OnInit {
   
   agendamento: Agendamento;
 
-  constructor(private agendamentoService : AgendamentoService) { }
+  constructor(private agendamentoService : AgendamentoService, private route: Router) { }
 
   ngOnInit(): void {
     this.getAgendamentos()
@@ -28,11 +29,5 @@ export class AgedamentoListComponent implements OnInit {
     this.agendamentoService.delete(id).subscribe(result => {
       this.getAgendamentos();
     });
-  }
-  checkAgendamentos(id:number){
-    this.agendamento.finalizada = "true"
-    this.agendamentoService.update(this.agendamento, id).subscribe(result =>{
-      this.getAgendamentos();
-    })
   }
 }

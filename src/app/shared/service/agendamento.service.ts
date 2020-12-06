@@ -26,12 +26,7 @@ export class AgendamentoService {
 
   public update(agendamento:  Agendamento, id : number): Observable<Agendamento>{
     const url = `${this.apiUrl}/${id}`
-    if(agendamento.id === id){
-      return this.http.put<Agendamento>(url, agendamento)
-    }else{
-      return this.getAgendamento();
-    }
-    
+      return this.http.put<Agendamento>(url, agendamento)    
 }
   public delete(id : number): Observable<Agendamento> {
     const url = `${this.apiUrl}/${id}`

@@ -21,14 +21,14 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { AgendamentoPerfilComponent } from './views/agendamento-perfil/agendamento-perfil.component';
+import { AgendamentoEditComponent } from './views/home/agendamento-edit/agendamento-edit.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AgedamentoListComponent,
     AgendamentoFormComponent,
-    AgendamentoPerfilComponent
+    AgendamentoEditComponent
   ],
   imports: [
     HttpClientModule,

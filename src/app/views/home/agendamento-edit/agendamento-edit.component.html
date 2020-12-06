@@ -1,5 +1,5 @@
-<h1 mat-dialog-title>Novo Agendamento</h1>
-<div mat-dialog-content>
+<mat-card>
+    <mat-card-title> Alugar Livro</mat-card-title>
     <form class="example-form" [formGroup]="agendamentoForm">
         <mat-form-field class="example-full-width">
             <mat-label>Nome do Aluno</mat-label>
@@ -52,14 +52,8 @@
             type="date">
         </mat-form-field>
     </form>
-</div>
-<div mat-dialog-actions>
-    <button mat-raised-button color="primary" (click)="creatAgendamento()">Salvar</button>
+    <div mat-dialog-actions>
+    <button mat-raised-button color="primary" (click)="editAgendamento(agendamento.id)">Salvar</button>
     <button mat-raised-button (click)="cancel()">Cancelar</button>
-</div>
-<!-- 
-NOME: string
-CURSO: String
-DATA: Date
-MATRICULA: Number
-ASSUNTO OU TITULO: String -->
+    </div>
+</mat-card>
