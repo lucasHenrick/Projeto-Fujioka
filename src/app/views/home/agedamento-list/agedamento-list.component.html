@@ -34,13 +34,14 @@
                           
                         </mat-card-content>
                         <mat-card-content fxLayoutAlign="end center">
-                            <a routerLink="/agendamento/{{ agenda.id }}">
-                                <button mat-raised-button  style="margin-bottom: 10px;"><mat-icon>check</mat-icon></button>
-                            </a>
+                            
                             <span fxFlex="5"></span>
                             <button mat-raised-button color="warn" style="margin-bottom: 10px;" (click)="deleteAgendamentos(agenda.id)"><mat-icon>delete</mat-icon></button>
                             <span fxFlex="5"></span>
-                            <button mat-raised-button color="primary" style="margin-bottom: 10px; margin-right: 10px;"><mat-icon>edit</mat-icon></button>
+                            <a routerLink="/agendamento/{{ agenda.id }}">
+                                <button mat-raised-button color="primary" style="margin-bottom: 10px; margin-right: 10px;"><mat-icon>edit</mat-icon></button>
+                            </a>
+                            
                         </mat-card-content>
                         
             
