@@ -1,6 +1,9 @@
 
         <span class="example-spacer"></span>
-        <button mat-raised-button (click)="getAgendamentos()" style="margin-left: 1250px; margin-top: 15px;"><mat-icon>update</mat-icon></button>
+        <div fxLayout="row wrap" f1q  xLayoutAlign="end center" style="padding: 2%" >
+            <button mat-raised-button (click)="getAgendamentos()"fxLayoutAlign="end center"><mat-icon>update</mat-icon>Atualizar</button>
+        </div>
+        
         <div fxLayout="row wrap" f1q  xLayoutAlign="start center" style="padding: 2%" >
             
             <ng-container *ngFor="let agenda of agendamento" style="margin: 0.5%;">
@@ -36,17 +39,14 @@
                         <mat-card-content fxLayoutAlign="end center">
                             
                             <span fxFlex="5"></span>
-                            <button mat-raised-button color="warn" style="margin-bottom: 10px;" (click)="deleteAgendamentos(agenda.id)"><mat-icon>delete</mat-icon></button>
-                            <span fxFlex="5"></span>
                             <a routerLink="/agendamento/{{ agenda.id }}">
                                 <button mat-raised-button color="primary" style="margin-bottom: 10px; margin-right: 10px;"><mat-icon>edit</mat-icon></button>
                             </a>
+                            <button mat-raised-button color="warn" style="margin-bottom: 10px;" (click)="deleteAgendamentos(agenda.id)"><mat-icon>delete</mat-icon></button>
+                            <span fxFlex="5"></span>
+                            
                             
                         </mat-card-content>
-                        
-            
-                    
-        
                 </mat-card>
             </ng-container>
         </div>
