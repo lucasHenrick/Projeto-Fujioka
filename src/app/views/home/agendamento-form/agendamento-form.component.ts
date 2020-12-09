@@ -14,6 +14,7 @@ import { AgendamentoService } from 'src/app/shared/service/agendamento.service';
 export class AgendamentoFormComponent implements OnInit{
 
   public agendamentoForm: FormGroup
+  
   agendamento : Agendamento = {
     assunto: '',
     curso:'',
